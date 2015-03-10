@@ -1,5 +1,8 @@
 # DefaultThreadCulture
 
+[![build](https://ci.appveyor.com/api/projects/status/github/tallesl/DefaultThreadCulture)](https://ci.appveyor.com/project/TallesL/DefaultThreadCulture)
+[![nuget package](https://badge.fury.io/nu/DefaultThreadCulture.png)](http://badge.fury.io/nu/DefaultThreadCulture)
+
 Sets a default for [Thread.CurrentCulture](https://msdn.microsoft.com/library/system.threading.thread.currentculture.aspx) or [ThreadCurrentUICulture](https://msdn.microsoft.com/library/system.threading.thread.currentuiculture.aspx). Works from .NET 4.5 to 2.0.
 
 ## Usage
