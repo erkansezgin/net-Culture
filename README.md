@@ -23,4 +23,4 @@ Then, if the first didn't succeed, attempts to set `s_userDefaultCulture` (or `s
 
 Finally, if both first and second steps didn't succeed, attempts to set `m_userDefaultCulture` (or `m_userDefaultUICulture` for UI), a .NET 2.0 hidden field.
 
-Kudos to [this SO answer](http://stackoverflow.com/a/7536117) for poiting out those private fields.
+Kudos to [this SO answer](http://stackoverflow.com/a/7536117) for pointing out those private fields.
