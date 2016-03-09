@@ -8,8 +8,8 @@
     <ProjectGuid>{8278FB62-DFB4-4FEB-B3B0-82296C2C01DC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DefaultThreadCulture</RootNamespace>
-    <AssemblyName>DefaultThreadCulture</AssemblyName>
+    <RootNamespace>CultureLibrary</RootNamespace>
+    <AssemblyName>Culture</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -30,14 +30,14 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\DefaultThreadCulture.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Culture.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DefaultThreadCurrentCulture.cs" />
+    <Compile Include="Culture.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

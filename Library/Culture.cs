@@ -1,19 +1,19 @@
-﻿using System.Globalization;
-using System.Reflection;
-
-namespace DefaultThreadCulture
+﻿namespace CultureLibrary
 {
+    using System.Globalization;
+    using System.Reflection;
+
     /// <summary>
     /// Sets a default CurrentCulture for .NET threads.
     /// </summary>
-    public static class DefaultThreadCurrentCulture
+    public static class Culture
     {
         /// <summary>
         /// Sets a default for Thread.CurrentCulture.
         /// </summary>
         /// <param name="culture">Default culture</param>
         /// <returns>True if the set successfully, false otherwise</returns>
-        public static bool SetCulture(CultureInfo culture)
+        public static bool SetDefault(CultureInfo culture)
         {
             return TrySetCulture45(culture) || TrySetCulture40(culture) || TrySetCulture20(culture);
         }
@@ -23,7 +23,7 @@ namespace DefaultThreadCulture
         /// </summary>
         /// <param name="culture">Default UI culture</param>
         /// <returns>True if the set successfully, false otherwise</returns>
-        public static bool SetUICulture(CultureInfo culture)
+        public static bool SetUIDefault(CultureInfo culture)
         {
             return TrySetUICulture45(culture) || TrySetUICulture40(culture) || TrySetUICulture20(culture);
         }
@@ -73,17 +73,29 @@ namespace DefaultThreadCulture
         private static bool SetStaticPublicProperty(string name, CultureInfo value)
         {
             var property = typeof(CultureInfo).GetProperty(name, BindingFlags.Static | BindingFlags.Public);
-            if (property == null) return false;
-            property.SetValue(null, value, null);
-            return true;
+            if (property == null)
+            {
+                return false;
+            }
+            else
+            {
+                property.SetValue(null, value, null);
+                return true;
+            }
         }
 
         private static bool SetStaticPrivateField(string name, CultureInfo value)
         {
             var field = typeof(CultureInfo).GetField(name, BindingFlags.Static | BindingFlags.NonPublic);
-            if (field == null) return false;
-            field.SetValue(null, value);
-            return true;
+            if (field == null)
+            {
+                return false;
+            }
+            else
+            {
+                field.SetValue(null, value);
+                return true;
+            }
         }
     }
 }
