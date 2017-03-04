@@ -1,14 +1,14 @@
 # Culture
 
-![[][build]][build-img]
-![[][version]][version-img]
+[![][build-img]][build]
+[![][nuget-img]][nuget]
 
 Sets a default for [Thread.CurrentCulture] or [ThreadCurrentUICulture].
 
 [build]:                  https://ci.appveyor.com/api/projects/status/github/tallesl/net-culture
 [build-img]:              https://ci.appveyor.com/api/projects/status/github/tallesl/net-socket?svg=true
-[version]:                https://www.nuget.org/packages/Culture
-[version-img]:            https://badge.fury.io/nu/Culture.svg
+[nuget]:                  https://www.nuget.org/packages/Culture
+[nuget-img]:              https://badge.fury.io/nu/Culture.svg
 [Thread.CurrentCulture]:  https://msdn.microsoft.com/library/System.Threading.Thread.CurrentCulture
 [ThreadCurrentUICulture]: https://msdn.microsoft.com/library/System.Threading.Thread.CurrentUICulture
 
